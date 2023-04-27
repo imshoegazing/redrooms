@@ -1,0 +1,781 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald&display=swap");
+
+:root {
+  --red: #ff0000;
+}
+
+* {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+h1 {
+  font-size: 6rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+p {
+  color: #000;
+}
+
+a,
+a:focus {
+  color: var(--red);
+  text-decoration: none;
+}
+
+a:visited,
+a:hover,
+a:active,
+a:link {
+  color: #000;
+  text-decoration: none;
+}
+
+.welcomeH1 h1:hover {
+  color: var(--red);
+}
+
+.phone-book-btn {
+  color: #fff;
+  background-color: #000;
+  font-weight: 700;
+  height: 55px;
+  width: 100%;
+  padding: 10px 35px;
+  font-size: 18px;
+  border: none;
+  text-transform: capitalize;
+  border-radius: 5px;
+  box-shadow: var(--red) 0px 3px 8px;
+  opacity: 0;
+}
+
+.phone-book-btn:hover {
+  color: var(--red);
+}
+
+body {
+  background-color: rgb (37, 37, 37);
+  background-image: linear-gradient(
+    to bottom,
+
+    rgb(24, 24, 24) 00%,
+    rgb(20, 20, 20) 100%
+  );
+  font-family: "Oswald", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background-image: url("images/bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.main-container {
+  position: relative;
+  width: 90vw;
+  height: 90vh;
+  border: 1px solid var(--red);
+  background-color: #000;
+  border-radius: 10px;
+  box-shadow: var(--red) 0px 3px 8px;
+}
+
+nav {
+  background-color: #fff;
+  padding: 20px;
+  margin: 10px;
+  outline: 2px solid #000;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  border: 1px solid #ff0000;
+  box-shadow: var(--red) 0px 3px 8px;
+  transition: width 0.8s linear;
+}
+
+nav.active {
+  width: auto;
+}
+
+nav ul {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  width: 0;
+  transition: width 0.8s linear;
+  font-weight: bold;
+}
+
+nav.active ul {
+  width: 100%;
+}
+
+nav ul li {
+  text-transform: uppercase;
+  transform: rotateY(0deg);
+  opacity: 0;
+  transition: transform 0.6s linear, opacity 0.6s linear;
+}
+
+nav.active ul li {
+  opacity: 1;
+  transform: rotateY(360deg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul a {
+  position: relative;
+  color: #000;
+  text-decoration: none;
+  margin: 0 10px;
+  padding: 2px;
+}
+
+nav ul a:hover {
+  color: var(--red);
+}
+
+.icon {
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  height: 30px;
+  width: 30px;
+}
+
+.icon:focus {
+  outline: 0;
+}
+
+.icon .line {
+  background-color: #000;
+  height: 2px;
+  position: absolute;
+  width: 20px;
+  top: 10px;
+  left: 5px;
+  transition: transform 1s linear;
+}
+
+.icon .line2 {
+  top: auto;
+  bottom: 10px;
+}
+
+nav.active .icon .line1 {
+  transform: rotate(-765deg) translateY(5.5px);
+}
+
+nav.active .icon .line2 {
+  transform: rotate(765deg) translateY(-5.5px);
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+  background-image: url("images/logo.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+
+.window {
+  position: absolute;
+  top: 95px;
+  left: 10px;
+  right: 10px;
+  bottom: 9px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 3px;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s ease-in;
+}
+
+.window.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.welcomeH1 {
+  transform: scale(0);
+  opacity: 0;
+  transition: all 2s ease-in-out;
+}
+
+.welcomeH1.active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.welcomeH2 {
+  margin-top: 10px;
+  transform: scale(0);
+  opacity: 0;
+  transition: all 2s ease-in-out;
+}
+
+.welcomeH2.active {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-info {
+  width: 30%;
+  margin-left: 55px;
+  text-align: start;
+}
+
+.about h1 {
+  margin-bottom: 20px;
+}
+
+.hotel-picture {
+  background-image: url("images/hotel.jpeg");
+  box-shadow: var(--red) 0px 3px 8px;
+  background-position: center;
+  background-size: cover;
+  width: 500px;
+  height: 375px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.rooms {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rooms-info {
+  width: 30%;
+  margin-left: 55px;
+  text-align: start;
+}
+
+.rooms h1 {
+  margin-bottom: 20px;
+}
+
+.room-picture {
+  background-image: url("images/room1.jpg");
+  box-shadow: var(--red) 0px 3px 8px;
+  background-position: center;
+  background-size: cover;
+  width: 800px;
+  height: 400px;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.gallery-container {
+  display: flex;
+  width: 80vw;
+}
+
+.panel {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000;
+  box-shadow: var(--red) 0px 3px 8px;
+  height: 60vh;
+  border-radius: 10px;
+  color: #fff;
+  cursor: pointer;
+  flex: 1;
+  margin: 10px;
+  position: relative;
+  transition: all 700ms ease-in;
+  -webkit-transition: all 700ms ease-in;
+}
+
+.panel h2 {
+  text-transform: capitalize;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+.panel.active h2 {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
+
+.section .section-center {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.bookings-btn {
+  width: 200px;
+  padding: 20px;
+}
+
+.book-btn {
+  color: #fff;
+  background-color: #000;
+  font-weight: 700;
+  height: 55px;
+  padding: 10px 35px;
+  font-size: 18px;
+  border: none;
+  display: block;
+  width: 100%;
+  text-transform: capitalize;
+  border-radius: 5px;
+  box-shadow: var(--red) 0px 3px 8px;
+}
+
+.book-btn:hover {
+  color: var(--red);
+}
+
+#booking::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  background: #fff;
+}
+
+.booking-cta {
+  margin-top: 45px;
+}
+
+.booking-cta h1 {
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 900;
+}
+
+.booking-cta p {
+  margin-top: 5px;
+}
+
+.booking-form {
+  background: #fff;
+  -webkit-box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 0px 10px -5px rgba(0, 0, 0, 0.3);
+  max-width: 642px;
+  border: 3px solid #000;
+  border-radius: 3px;
+  box-shadow: var(--red) 0px 3px 8px;
+  width: 100%;
+  margin: 10px;
+  padding: 40px 30px;
+}
+
+.booking-form .form-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.booking-form .form-control {
+  background-color: #fff;
+  height: 55px;
+  padding: 0px;
+  padding-top: 15px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  border: none;
+  border-bottom: 2px solid #000;
+  border-radius: 0px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.booking-form .form-control::-webkit-input-placeholder {
+  color: #000;
+}
+
+.booking-form .form-control:-ms-input-placeholder {
+  color: #000;
+}
+
+.booking-form .form-control::placeholder {
+  color: #000;
+}
+
+.booking-form input[type="date"].form-control:invalid {
+  color: #000;
+}
+
+.booking-form .form-group:not(.input-not-empty) .form-control:not(:focus) {
+  color: transparent;
+}
+
+.booking-form select.form-control {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.booking-form select.form-control + .select-arrow {
+  position: absolute;
+  right: 0px;
+  bottom: 7px;
+  width: 32px;
+  line-height: 32px;
+  height: 32px;
+  text-align: center;
+  pointer-events: none;
+  color: #000;
+  font-size: 14px;
+}
+
+.booking-form select.form-control + .select-arrow:after {
+  content: "\279C";
+  display: block;
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.booking-form .form-label {
+  color: #000;
+  font-weight: 700;
+  position: absolute;
+  top: 20px;
+  left: 0px;
+  text-transform: uppercase;
+  line-height: 24px;
+  height: 23px;
+  font-size: 16px;
+  pointer-events: none;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+
+.booking-form .form-group .form-control:focus + .form-label {
+  top: 0px;
+  color: #000;
+  font-size: 14px;
+}
+
+.booking-form .form-group.input-not-empty .form-label {
+  top: 0px;
+  color: #000;
+  font-size: 14px;
+}
+
+.booking-form .submit-btn {
+  color: #fff;
+  background-color: #000;
+  font-weight: 700;
+  height: 55px;
+  padding: 10px 35px;
+  font-size: 18px;
+  border: none;
+  display: block;
+  width: 100%;
+  text-transform: capitalize;
+}
+
+.booking-form .submit-btn:hover {
+  color: var(--red);
+}
+
+.social-media {
+  font-size: 4rem;
+  color: #000;
+}
+
+.social-media a {
+  color: #000;
+  margin: 5px;
+  border-bottom: none;
+}
+
+.social-media a:hover,
+a:focus {
+  color: var(--red);
+}
+
+@media (max-width: 1400px) {
+  .col-md-5 {
+    display: none;
+  }
+
+  .row {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .col-md-6,
+  .booking-form {
+    width: 800px;
+  }
+}
+
+@media (max-width: 1380px) {
+  .room-picture {
+    width: 600px;
+    height: 350px;
+  }
+
+  .rooms-info {
+    margin-left: 50px;
+  }
+
+  .about-info {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 1100px) {
+  .about h1 {
+    font-size: 3rem;
+  }
+
+  .hotel-picture {
+    width: 400px;
+  }
+
+  .about-info p {
+    font-size: 1rem;
+  }
+
+  .about-info {
+    margin-left: 30px;
+  }
+
+  .room-picture {
+    width: 470px;
+    height: 350px;
+  }
+
+  .rooms-info {
+    margin-left: 55px;
+    width: 200px;
+  }
+
+  .rooms h1 {
+    font-size: 3rem;
+  }
+
+  .rooms-info p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(3),
+  .panel:nth-of-type(4) {
+    display: none;
+  }
+}
+
+@media (max-width: 860px) {
+  .room-picture {
+    width: 400px;
+    height: 350px;
+  }
+}
+
+@media (max-width: 840px) {
+  #booking {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .about-info {
+    margin-top: 90px;
+  }
+
+  .room-picture {
+    width: 350px;
+  }
+
+  .hotel-picture {
+    width: 300px;
+    height: 330px;
+  }
+
+  .about-info p {
+    height: 300px;
+  }
+}
+
+@media (max-width: 768px) {
+  .room-picture {
+    width: 280px;
+  }
+
+  .panel:nth-of-type(2),
+  .panel:nth-of-type(3),
+  .panel:nth-of-type(4) {
+    display: none;
+  }
+}
+
+@media (max-width: 670px) {
+  nav ul {
+    font-size: 12px;
+  }
+
+  .hotel-picture {
+    width: 220px;
+  }
+
+  .about-info {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 650px) {
+  nav ul {
+    font-size: 12px;
+  }
+
+  .room-picture {
+    width: 250px;
+  }
+
+  .rooms-info {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 610px) {
+  nav ul {
+    font-size: 11px;
+  }
+
+  .room-picture {
+    width: 230px;
+  }
+
+  .rooms-info {
+    margin-left: 15px;
+  }
+}
+
+@media (max-width: 550px) {
+  nav ul li:nth-child(2) {
+    display: none;
+  }
+
+  .rooms-info {
+    width: 110px;
+  }
+}
+
+@media (max-width: 520px) {
+  .hotel-picture {
+    width: 200px;
+  }
+
+  .about-info {
+    margin-left: 10px;
+    margin-top: 75px;
+    width: 150px;
+  }
+}
+
+@media (max-width: 495px) {
+  .welcomeH1 h1 {
+    font-size: 35px;
+  }
+
+  .welcomeH2 h2 {
+    font-size: 15px;
+  }
+
+  nav ul {
+    font-size: 9px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  nav ul li a {
+    margin: 0;
+    padding: 7px;
+  }
+
+  .about,
+  .rooms {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hotel-picture {
+    margin-top: 50px;
+    width: 280px;
+  }
+
+  .room-picture {
+    width: 280px;
+    height: 200px;
+  }
+
+  .about-info {
+    width: 270px;
+    margin-top: 20px;
+  }
+
+  .rooms-info {
+    text-align: center;
+    margin-top: 20px;
+    width: 180px;
+  }
+
+  .panel {
+    background-position: left;
+    height: 35vh;
+  }
+}

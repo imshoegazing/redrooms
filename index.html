@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="images/logo.png" />
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Red Rooms</title>
+  </head>
+  <body>
+    <div class="main-container">
+      <nav id="nav">
+        <ul>
+          <li><div class="logo"></div></li>
+          <li id="home"><a href="#">Home</a></li>
+          <li id="about"><a href="#">About</a></li>
+          <li id="rooms"><a href="#">Rooms</a></li>
+          <li id="gallery"><a href="#">Gallery</a></li>
+          <li id="bookings"><a href="#">Bookings</a></li>
+          <li id="contact"><a href="#">Contact</a></li>
+        </ul>
+        <button class="icon" id="toggle">
+          <div class="line line1"></div>
+          <div class="line line2"></div>
+        </button>
+      </nav>
+      <div class="content">
+        <div class="window window-home active">
+          <div class="welcomeH1">
+            <h1><b>Red Rooms</b></h1>
+          </div>
+          <div class="welcomeH2">
+            <h2><b>Design Hotel</b></h2>
+          </div>
+        </div>
+        <div class="window window-about">
+          <div class="about">
+            <div class="hotel-picture"></div>
+            <div class="about-info">
+              <h1>Hotel</h1>
+              <p>
+                This first-class hotel lies in Berlin's Friedrichshain district,
+                close to Ostkreuz and Warschauer Straße. The modern, stylish Red
+                Rooms include a laptop safe and a TV with satellite channels. A
+                hairdryer and bathrobes are provided in the bathroom. Guests
+                receive a free bottle of mineral water on arrival. Red Rooms
+                rooftop has a large sunbathing area. The terrace offers great
+                views of Berlin. Red Rooms Hotel is a 5-minute walk from the
+                tram stop at Warschauer Straße. Numerous amount of bars,
+                restaurants and fancy shops are all around. Wi-Fi is free for
+                all our guests.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="window window-rooms">
+          <div class="rooms">
+            <div class="room-picture"></div>
+            <div class="rooms-info">
+              <h1>Rooms</h1>
+              <p>
+                <b>Rooms:</b> 35 m2<br />
+                <b>Check-In:</b> 14PM<br />
+                <b>Check-Out:</b> 13PM<br />
+                <b>Age policty:</b> Adults only, 21+<br />
+                <b>Parking:</b> 15€/Night<br />
+                <b>Bathroom:</b> Private bathrooms<br />
+                <b>Pets:</b> Pets are not allowed<br />
+                <b>Minibar/Safe:</b> Available<br />
+                <b>Free Wi-Fi:</b> Included<br />
+                <b>Reception:</b> 24/7<br />
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="window window-gallery">
+          <div class="gallery-container">
+            <div
+              class="panel active"
+              style="background-image: url('images/room1.jpg')"
+            >
+              <h2>Double Room</h2>
+            </div>
+            <div
+              class="panel"
+              style="background-image: url('images/room2.jpg')"
+            >
+              <h2>Double Room</h2>
+            </div>
+            <div
+              class="panel"
+              style="background-image: url('images/room3.jpg')"
+            >
+              <h2>Double Room</h2>
+            </div>
+            <div
+              class="panel"
+              style="background-image: url('images/room4.jpg')"
+            >
+              <h2>Living Area</h2>
+            </div>
+            <div
+              class="panel"
+              style="background-image: url('images/room5.jpg')"
+            >
+              <h2>Bathroom</h2>
+            </div>
+          </div>
+        </div>
+        <div class="window window-bookings">
+          <div class="bookings-btn">
+            <button class="book-btn">Book Now</button>
+          </div>
+          <div id="booking" class="section">
+            <div class="section-center">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-5">
+                    <div class="booking-cta">
+                      <h1>Book your room</h1>
+                      <p>
+                        Rates are exclusive of city tax. Private and touritic
+                        stays are subject to a 5% city tax. This tax will be
+                        applied to your hotel bill.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-md-6 col-md-offset-1">
+                    <div class="booking-form">
+                      <form>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <input
+                                class="form-control"
+                                type="text"
+                                required
+                              />
+                              <span class="form-label">Name</span>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <input
+                                class="form-control"
+                                type="email"
+                                required
+                              />
+                              <span class="form-label">E-Mail</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <input class="form-control" type="tel" required />
+                              <span class="form-label">Phone</span>
+                            </div>
+                          </div>
+                          <div class="col-md-3 col-sm-6">
+                            <div class="form-group">
+                              <span class="form-label">Rooms</span>
+                              <select class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                              </select>
+                              <span class="select-arrow"></span>
+                            </div>
+                          </div>
+                          <div class="col-md-3 col-sm-6">
+                            <div class="form-group">
+                              <span class="form-label">Guests</span>
+                              <select class="form-control">
+                                <option>1</option>
+                                <option>2</option>
+                              </select>
+                              <span class="select-arrow"></span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <input
+                                class="form-control"
+                                type="date"
+                                required
+                              />
+                              <span class="form-label">Check In</span>
+                            </div>
+                          </div>
+                          <div class="col-md-6">
+                            <div class="form-group">
+                              <input
+                                class="form-control"
+                                type="date"
+                                required
+                              />
+                              <span class="form-label">Check Out</span>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-btn">
+                          <button class="submit-btn">Book Now</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="window window-contact">
+          <div class="copyright">
+            <div class="social-media">
+              <a href="#" target="_blank"
+                ><i class="fa-solid fa-envelope"></i
+              ></a>
+              <a href="#" target="_blank"
+                ><i class="fa-brands fa-square-twitter"></i
+              ></a>
+              <a href="#" target="_blank"
+                ><i class="fa-brands fa-facebook"></i
+              ></a>
+              <a href="#" target="_blank"
+                ><i class="fa-brands fa-instagram"></i
+              ></a>
+            </div>
+            <p>+49 030 5555442222</p>
+            <p>Warschauer Straße 5</p>
+            <p>Berlin, Germany</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script>
+      $(".form-control").each(function () {
+        floatedLabel($(this));
+      });
+
+      $(".form-control").on("input", function () {
+        floatedLabel($(this));
+      });
+
+      function floatedLabel(input) {
+        var $field = input.closest(".form-group");
+        if (input.val()) {
+          $field.addClass("input-not-empty");
+        } else {
+          $field.removeClass("input-not-empty");
+        }
+      }
+    </script>
+  </body>
+</html>
